@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #00c9ff);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+.todo-list {
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.todo-list:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 28px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#questions {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.option {
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.25);
+  padding: 12px 20px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: #ffffff;
+  transform: scale(1.03);
+}
+
+.selected {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #fff;
+  color: #fff;
+  box-shadow: inset 0 0 0 2px #fff;
+}
+
+.option.selected:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#next-btn,
+#restart-btn {
+  padding: 12px 24px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+#next-btn:hover,
+#restart-btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+#score {
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 20px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
